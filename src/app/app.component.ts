@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // ✅ Import FormsModule
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [FormsModule], // ✅ Use FormsModule instead of NgModel
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  logoUrl: string = "assets/BL_logo_square_png.png"; // Path to the logo
-
-  launchBridgeLabz() {
-    window.open("https://www.bridgelabz.com", "_blank"); // Opens in a new tab
-  }
+  userName: string = ""; // ✅ Make sure this property exists
 }
