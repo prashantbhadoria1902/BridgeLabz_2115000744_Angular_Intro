@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterModule], // Add RouterModule here
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = "Hello from BridgeLabz";
+  logoUrl: string = "assets/BL_logo_square_png.png"; // Path to the logo
+
+  launchBridgeLabz() {
+    window.open("https://www.bridgelabz.com", "_blank"); // Opens in a new tab
+  }
 }
