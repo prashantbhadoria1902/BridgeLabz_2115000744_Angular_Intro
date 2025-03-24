@@ -1,4 +1,7 @@
 <h1>Hello {{ userName }} from BridgeLabz!</h1>
 
 <!-- Input field with Two-Way Binding -->
-<input type="text" [(ngModel)]="userName" placeholder="Enter your name">
+<input type="text" [(ngModel)]="userName" (input)="validateName()" placeholder="Enter your name">
+
+<!-- Error Message (shown only if invalid) -->
+<p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
